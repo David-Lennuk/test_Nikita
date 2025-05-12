@@ -9,9 +9,7 @@ pipeline {
         }
 	stage("Create a container") {
 	    steps { 
-		sh 'docker run _p 4000:3000 -d hello-app'
-	      }
-    	    }
+		sh 'docker run _p 4000:3000 -d hello-app'}
+		}
 	}
-    }
 }
