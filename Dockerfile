@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Käivita rakendus, kui konteiner stardib
-CMD [ "npm", "start" ]
+CMD [ "npm", "app.js" ]
