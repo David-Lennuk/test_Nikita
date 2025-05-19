@@ -1,24 +1,24 @@
 {
-  "name": "my-travel-app", // Более описательное имя
+  "name": "my-travel-app", 
   "version": "1.0.0",
-  "main": "app.js", // Если app.js - главный файл
+  "main": "app.js", 
   "scripts": {
-    "start": "node app.js", // Добавил "start" - общепринятая команда для запуска
-    "dev": "node app.js",   // Можно оставить для разработки, если есть отличия от start
-    "test": "jest"          // Правильная команда для запуска Jest
+    "start": "node app.js", 
+    "dev": "node app.js",   
+    "test": "jest"          
   },
   "keywords": [
     "express",
     "travel",
     "api"
   ],
-  "author": "Ваше Имя <vashemail@example.com>", // Хорошо бы заполнить
+  "author": "Ваше Имя <vashemail@example.com>",
   "license": "ISC",
-  "description": "Приложение для отображения любимого места для путешествий", // Хорошо бы заполнить
+  "description": "Приложение для отображения любимого места для путешествий",
   "dependencies": {
-    "express": "^4.18.2" // Используем стабильную версию Express (проверьте актуальную)
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "jest": "^29.7.0"   // Jest в devDependencies
+    "jest": "^29.7.0" 
   }
 }
