@@ -1,11 +1,8 @@
 # Kasuta ametlikku Node.js baasimaget
-FROM node:18-alpine
+FROM node:18
 
 # Määra töökataloog konteineris
-WORKDIR /usr/src/app
-
-# Kopeeri package.json ja package-lock.json (kui on olemas)
-COPY package*.json ./
+WORKDIR app
 
 # Paigalda rakenduse sõltuvused
 RUN npm install
@@ -17,4 +14,4 @@ COPY . .
 EXPOSE 3000
 
 # Käivita rakendus, kui konteiner stardib
-CMD [ "npm", "app.js" ]
+CMD [ "node", "app.js" ]
