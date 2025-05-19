@@ -1,14 +1,20 @@
-# Fetching the minified node image on alpine linux
-FROM node:slim
+# Kasuta ametlikku Node.js baasimaget
+FROM node:18-alpine
 
-# Setting up the work directory
-WORKDIR /express-docker
+# Määra töökataloog konteineris
+WORKDIR /usr/src/app
 
-# Copying all the files in our project
-COPY . .
+# Kopeeri package.json ja package-lock.json (kui on olemas)
+COPY package*.json ./
 
-# Installing dependencies
+# Paigalda rakenduse sõltuvused
 RUN npm install
 
-# Starting our application
-CMD [ "node", "app.js"]
+# Kopeeri ülejäänud rakenduse lähtekood
+COPY . .
+
+# Ava port 3000, mida rakendus kasutab
+EXPOSE 3000
+
+# Käivita rakendus, kui konteiner stardib
+CMD [ "npm", "start" ]
